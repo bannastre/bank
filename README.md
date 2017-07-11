@@ -44,3 +44,7 @@ It was developed using TDD and the SOLID principles, using:
 
 Run the unit tests with ```$ rspec```  
 There's also a feature test running through a typical user's interactions; just run ```$ ruby feature_test.rb```
+
+## Could you make this any better?
+
+To improve this further, I would like to create a Money class that understands how to handle a decimalised currency. This reduces the dependency on primitives (in this case Integers)

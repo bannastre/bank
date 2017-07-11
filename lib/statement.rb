@@ -12,7 +12,6 @@ class Statement
       balance = adjust_balance(transaction, balance)
       statement_line(transaction, balance)
     end
-    statement_footer(balance)
   end
 
   private
@@ -22,11 +21,7 @@ class Statement
   end
 
   def statement_header
-    p 'Date || Credit || Debit || Balance'
-  end
-
-  def statement_footer(balance)
-    p "Your current balance is £#{balance}"
+    p 'Date | Credit | Debit | Balance'
   end
 
   def statement_line(transaction, balance)
