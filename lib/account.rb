@@ -21,4 +21,12 @@ class Account
   def withdraw(amount)
     @transactions.record(Transaction.new(amount, :debit, Time.now))
   end
+
+  def statement
+    balance = INITIAL_BALANCE
+    @transactions.history.each do |transaction|
+      transaction.direction == :credit ? balance += transaction.amount : balance -= transaction.amount
+    end
+    p "Your current balance is £#{balance}"
+  end
 end
