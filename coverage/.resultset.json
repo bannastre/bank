@@ -19,7 +19,6 @@
       ],
       "/Users/bannastre/Google Drive/projects/makers/tech_tests/bank/lib/account.rb": [
         null,
-        null,
         1,
         1,
         null,
@@ -61,9 +60,7 @@
       ],
       "/Users/bannastre/Google Drive/projects/makers/tech_tests/bank/lib/transaction.rb": [
         null,
-        null,
         1,
-        null,
         1,
         null,
         1,
@@ -92,12 +89,8 @@
       ],
       "/Users/bannastre/Google Drive/projects/makers/tech_tests/bank/lib/transactions.rb": [
         null,
-        null,
         1,
-        null,
         1,
-        3,
-        null,
         null,
         1,
         3,
@@ -106,10 +99,9 @@
         1,
         2,
         null,
-        null,
         null
       ]
     },
-    "timestamp": 1499771403
+    "timestamp": 1499771713
   }
 }
