@@ -11,4 +11,8 @@ describe Account do
   it 'can make a deposit' do
     expect { account.deposit(1000) }.to change { account.transaction_history.length }.by 1
   end
+
+  it 'can make a withdrawal' do
+    expect { account.withdraw(1000) }.to change { account.transaction_history.length }.by 1
+  end
 end

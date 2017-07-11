@@ -13,4 +13,8 @@ class Account
   def deposit(amount)
     @transactions.record(Transaction.new(amount, :credit))
   end
+
+  def withdraw(amount)
+    @transactions.record(Transaction.new(amount, :debit))
+  end
 end
