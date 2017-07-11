@@ -17,12 +17,35 @@
         null,
         null,
         1,
+        1,
+        null
+      ],
+      "/Users/bannastre/Google Drive/projects/makers/tech_tests/bank/spec/transaction_spec.rb": [
+        1,
         null,
+        1,
+        null,
+        2,
+        2,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/bannastre/Google Drive/projects/makers/tech_tests/bank/lib/transaction.rb": [
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
         1,
         null,
         null
       ]
     },
-    "timestamp": 1499768727
+    "timestamp": 1499769451
   }
 }
