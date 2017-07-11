@@ -14,15 +14,21 @@ class Account
   end
 
   def deposit(amount)
-    @transactions.record(Transaction.new(amount, :credit, Time.now.strftime("%d-%m-%Y %H:%M")))
+    @transactions.record(Transaction.new(amount, :credit, time))
   end
 
   def withdraw(amount)
-    @transactions.record(Transaction.new(amount, :debit, Time.now.strftime("%d-%m-%Y %H:%M")))
+    @transactions.record(Transaction.new(amount, :debit, time))
   end
 
   def statement
     statement = Statement.new
     statement.build(transaction_history)
+  end
+
+  private
+
+  def time
+    Time.now.strftime("%d-%m-%Y %H:%M")
   end
 end
