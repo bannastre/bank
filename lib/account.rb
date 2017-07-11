@@ -15,17 +15,24 @@ class Account
   end
 
   def deposit(amount)
-    @transactions.record(Transaction.new(amount, :credit, Time.now))
+    @transactions.record(Transaction.new(amount, :credit, Time.now.strftime("%d-%m-%Y %H:%M")))
   end
 
   def withdraw(amount)
-    @transactions.record(Transaction.new(amount, :debit, Time.now))
+    @transactions.record(Transaction.new(amount, :debit, Time.now.strftime("%d-%m-%Y %H:%M")))
   end
 
   def statement
     balance = INITIAL_BALANCE
+    p 'Date || Credit || Debit || Balance'
     @transactions.history.each do |transaction|
-      transaction.direction == :credit ? balance += transaction.amount : balance -= transaction.amount
+      if transaction.direction == :credit
+        balance += transaction.amount
+        p "#{transaction.time} | #{transaction.amount} | | #{balance}"
+      else
+        balance -= transaction.amount
+        p "#{transaction.time} | | #{transaction.amount} | #{balance}"
+      end
     end
     p "Your current balance is £#{balance}"
   end
