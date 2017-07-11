@@ -1,9 +1,8 @@
 require_relative 'transactions.rb'
+require_relative 'statement.rb'
 
 # Account understands interactions with the bank
 class Account
-  INITIAL_BALANCE = 0
-
   Transaction = Struct.new(:amount, :direction, :time)
 
   def initialize
@@ -23,17 +22,7 @@ class Account
   end
 
   def statement
-    balance = INITIAL_BALANCE
-    p 'Date || Credit || Debit || Balance'
-    @transactions.history.each do |transaction|
-      if transaction.direction == :credit
-        balance += transaction.amount
-        p "#{transaction.time} | #{transaction.amount} | | #{balance}"
-      else
-        balance -= transaction.amount
-        p "#{transaction.time} | | #{transaction.amount} | #{balance}"
-      end
-    end
-    p "Your current balance is £#{balance}"
+    statement = Statement.new
+    statement.build(transaction_history)
   end
 end
