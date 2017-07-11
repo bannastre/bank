@@ -2,9 +2,11 @@
 
 class Transaction
 
-  attr_reader :time
-  
-  def initialize(time = Time.now)
+  attr_reader :time, :amount, :direction
+
+  def initialize(amount, direction, time = Time.now)
     @time = time
+    @amount = amount
+    @direction =  direction
   end
 end
